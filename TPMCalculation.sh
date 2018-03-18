@@ -4,9 +4,9 @@
 # Run jobs on slurm matchine
 # Invoked by:
 #
-# READPATH=/data/rc003/lu/transcriptome/$1 sbatch trim_galore.sh
+# READPATH=/data/rc003/lu/transcriptome/$i sbatch TPMCalculation.sh
 #
-
+# $i=genome (e.g. human)
 
 #SBATCH -p batch
 #SBATCH -N 1
@@ -18,8 +18,6 @@
 #SBATCH --mail-type=END                                        
 #SBATCH --mail-type=FAIL                                       
 #SBATCH --mail-user=lu.zeng@adelaide.edu.au  
-
-# $i=genome (e.g. human)
 
 # Load Softwares
 module load Trim_Galore/0.4.1-foss-2015b
