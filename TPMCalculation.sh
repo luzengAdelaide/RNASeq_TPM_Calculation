@@ -59,7 +59,7 @@ trim_galore --stringency 6 -o /data/rc003/lu/transcriptome/$1/trim/ --paired -fa
 mkdir /data/rc003/lu/transcriptome/$1/trim
 trim_galore --clip_R1 5 --three_prime_clip_R1 5 -o $/data/rc003/lu/transcriptome/$1/trim/ -fastqc_args "-t 8" /data/rc003/lu/transcriptome/$1/${FILES2[$SLURM_ARRAY_TASK_ID]}_1.fastq.gz
 
-# Make directory to store star output
+# Make directory to store RSEM output
 mkdir /data/rc003/lu/transcriptome/$1/RSEM/
 
 # Then prepare rsem reference
