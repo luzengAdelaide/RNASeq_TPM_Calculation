@@ -24,11 +24,11 @@ module load SRA-Toolkit/2.7.0-centos_linux64
 module load fastqc/0.11.4  
  
 # Extract the uniq names without _1/2.fastq.gz(for pair-end RNA-Seq data)
-FILES=($(ls $READPATH | rev | cut -c 12- | rev | uniq))
+FILES=($(ls ./| rev | cut -c 12- | rev | uniq))
 # Extract the uniq names without _1_val_1.fq.gz (for pair-end RNA-Seq data)
-FILES2=($(ls $READPATH | rev | cut -c 15- | rev | uniq))
+FILES2=($(ls ./ | rev | cut -c 15- | rev | uniq))
 # Extract the uniq names without _1_trimmed.fq.gz (for sing-end RNA-Seq data)
-FILES3=($(ls $READPATH | rev | cut -c 17- | rev | uniq))
+FILES3=($(ls ./ | rev | cut -c 17- | rev | uniq))
 
 # Download RNA-Seq data
 cd /data/rc003/lu/transcriptome/$1/
